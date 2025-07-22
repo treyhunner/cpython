@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Build script for Python on WebAssembly platforms.
 
-  $ ./Tools/wasm/wasm_builder.py emscripten-browser build repl
-  $ ./Tools/wasm/wasm_builder.py emscripten-node-dl build test
-  $ ./Tools/wasm/wasm_builder.py wasi build test
+  $ ./Tools/wasm/wasm_build.py emscripten-browser build repl
+  $ ./Tools/wasm/wasm_build.py emscripten-node-dl build test
+  $ ./Tools/wasm/wasm_build.py wasi build test
 
 Primary build targets are "emscripten-node-dl" (NodeJS, dynamic linking),
 "emscripten-browser", and "wasi".
@@ -18,7 +18,7 @@ and falls back to /opt/wasi-sdk.
 The 'build' Python interpreter must be rebuilt every time Python's byte code
 changes.
 
-  ./Tools/wasm/wasm_builder.py --clean build build
+  ./Tools/wasm/wasm_build.py --clean build build
 
 """
 import argparse
